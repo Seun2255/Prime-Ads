@@ -1,0 +1,82 @@
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(128, 128, 128, 0.384);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.connect__box {
+  width: 50%;
+  border-radius: 20px;
+  background-color: rgb(169, 121, 214);
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box__header {
+  margin: 0;
+  padding: 0%;
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 40px;
+  font-family: sans-serif;
+}
+
+.wallet__boxes {
+  margin-top: 50px;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.wallet__box {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.wallet__icon {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  background-color: rgb(184, 153, 212);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wallet__icon:hover {
+  background-color: rgb(146, 75, 212);
+}
+
+.wallet__icon:active {
+  background-color: rgb(140, 61, 214);
+}
+
+.metamask__icon {
+  position: relative;
+  width: 70%;
+  height: 140px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.wallet__name {
+  color: white;
+  font-size: 24px;
+  margin-top: 20px;
+}

@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-ethers");
+const { config } = require("dotenv");
 module.exports = {
   defaultNetwork: "matic",
   networks: {
@@ -8,7 +9,7 @@ module.exports = {
     matic: {
       url: "https://rpc-mumbai.maticvigil.com",
       accounts: [
-        "ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
+        "9e7b6927e0c902c0add9c2071382b1837076bbd7b263963092252c0d977d43cd",
       ],
     },
   },
