@@ -15,7 +15,7 @@ async function main() {
   console.log("Prime Token contract addresss:", contract1_.address);
 
   const contract2_ = await contract2.deploy(contract1_.address);
-  console.log("Prime Adds contract addresss:", contract2_.address);
+  console.log("Prime Ads contract addresss:", contract2_.address);
 }
 
 main()
