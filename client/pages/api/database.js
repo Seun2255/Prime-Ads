@@ -124,6 +124,7 @@ const joinReferral = async (address, id) => {
   temp.data[id].participants[address] = {
     referred: [],
     referrals: 0,
+    personalink: "",
   };
   await setDoc(doc(db, "offers", "openOffers"), { data: temp.data });
 
@@ -150,7 +151,7 @@ const joinReferral = async (address, id) => {
     referrals: 0,
   };
 
-  await setDoc(doc(db, "users", address), user);
+  await setDoc(doc(db, "users", address), owner);
 };
 
 export {
