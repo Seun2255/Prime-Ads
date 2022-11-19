@@ -41,3 +41,7 @@ I improved my knowledge on the usage of Next.js.
 ## What's next for Prime Ads
 
 I plan to make prime ads the next big thing, npm packages facilitating customized ads that are easy to add to your Dapp and features that will ensure that both those looking to advertise and those hoping to earn from promoting ads are satisfied.
+
+## Backend API
+
+this app has a backend functionalty, this is in a seperate github folder where i added the firebase Django functions to a pre-existing api i made.
