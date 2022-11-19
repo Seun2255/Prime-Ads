@@ -65,20 +65,12 @@ export default function ExpandedCard(props) {
           {type === "accepted" && (
             <>
               <div className={styles.details__item}>
-                API :{" "}
-                <button onClick={copyText} className={styles.copy__button}>
-                  copy
-                </button>
+                API : https://tritek-mail.herokuapp.com/api/
               </div>
-              <div className={styles.details__item} id={styles.api__details}>
-                <span style={{ textDecoration: "underline" }}>How to use</span>:
-                make an API call from your frontend using the API copied above,
-                get the current user of your Dapps address and replace the 'ETH
-                address of the user of your DApp' in the API link with the
-                address . It will return 'Referall registered' if succesful.
-                {/* e.g. using
-            axios: axios.post("https://tritek-mail.herokuapp.com/api/refer/$
-            {state.user.address}/${id}/0x44342435443746452463464"); */}
+              <div className={styles.details__item}>
+                How to use: make an API call from your frontend using the API
+                above, pass the address of the current user of your app and the
+                addreess you use on this Dapp in the call. e.g using axios,
               </div>
             </>
           )}
