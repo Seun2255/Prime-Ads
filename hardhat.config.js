@@ -8,7 +8,7 @@ module.exports = {
     },
     matic: {
       url: "https://rpc-mumbai.maticvigil.com",
-      accounts: [process.env.MENEMONIC],
+      // accounts: [process.env.MENEMONIC],
     },
   },
   solidity: {

@@ -24,7 +24,7 @@
 }
 
 .title {
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 32px;
   font-weight: 600;
 }
@@ -36,6 +36,11 @@
 
 .details__item {
   font-size: 22px;
+  margin-bottom: 5px;
+}
+
+#api__details {
+  width: 90%;
 }
 
 .button {
@@ -52,4 +57,18 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
+}
+
+.copy__button {
+  margin-left: 20px;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(0 75 204);
+  padding: 0 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  height: 2em;
 }

@@ -13,7 +13,7 @@
 .mode {
   font-size: 22px;
   font-weight: 600;
-  color: #9679ff;
+  color: #004bcc;
 }
 
 .name__card {
@@ -43,7 +43,7 @@
   padding: 0 20px;
   font-size: 18px;
   font-weight: 600;
-  background-color: #9679ff;
+  background-color: #004bcc;
   color: white;
   border-radius: 5px;
   border: none;

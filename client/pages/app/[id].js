@@ -11,7 +11,7 @@ import ConnectWalletModal from "../../modals/connectWalletModal";
 export default function App() {
   const [connected, setConnected] = useState(false);
   const [walletModal, setWalletModal] = useState(false);
-  const [view, setView] = useState("");
+  const [view, setView] = useState("finances");
   const [type, setType] = useState("advertiser");
 
   const handleConnectClick = () => {

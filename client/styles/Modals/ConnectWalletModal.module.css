@@ -14,7 +14,7 @@
 .connect__box {
   width: 50%;
   border-radius: 20px;
-  background-color: rgb(169, 121, 214);
+  background-color: #1d63db;
   padding: 0%;
   margin: 0%;
   display: flex;
@@ -52,7 +52,7 @@
   width: 100%;
   height: 200px;
   border-radius: 10px;
-  background-color: rgb(184, 153, 212);
+  background-color: #5c83c7;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -60,11 +60,11 @@
 }
 
 .wallet__icon:hover {
-  background-color: rgb(146, 75, 212);
+  background-color: #3c6cbe;
 }
 
 .wallet__icon:active {
-  background-color: rgb(140, 61, 214);
+  background-color: #2257b3;
 }
 
 .metamask__icon {
