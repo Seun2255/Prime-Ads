@@ -12,11 +12,13 @@
 
 .container {
   font-size: 28px;
-  height: 3em;
-  padding: 0 30px;
+  height: 4em;
+  padding: 0 40px;
   border: 2px solid blueviolet;
   border-radius: 10px;
   background-color: white;
+  display: flex;
+  align-items: center;
 }
 
 .text {

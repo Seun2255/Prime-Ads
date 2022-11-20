@@ -4,11 +4,13 @@ import styles from "../../styles/Advertiser/newProject.module.css";
 import icons from "../../assets/icons/icons";
 import { useState } from "react";
 import { startNewAd, userRefresh } from "../../pages/api/dappAPI";
+import SuccesModal from "../../modals/succesModal";
 
 export default function NewProject(props) {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState(0);
   const [link, setLink] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   const handleTyping = (value) => {
     if (!isNaN(value)) {
@@ -17,7 +19,12 @@ export default function NewProject(props) {
   };
 
   const handleClickStart = async () => {
-    startNewAd(amount, title, link).then(() => {});
+    startNewAd(amount, title, link).then(() => {
+      setShowModal(true);
+      setTimeout(() => {
+        setShowModal(false);
+      }, 2000);
+    });
   };
 
   return (
@@ -69,6 +76,7 @@ export default function NewProject(props) {
           Start
         </button>
       </div>
+      {showModal && <SuccesModal text={"campaign started!"} />}
     </div>
   );
 }

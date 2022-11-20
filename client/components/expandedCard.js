@@ -1,7 +1,7 @@
 import styles from "../styles/expandedCard.module.css";
 import icons from "../assets/icons/icons";
 import { useSpring, animated } from "react-spring";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext, use } from "react";
 import axios from "axios";
 import { Context } from "../context";
 import Button from "@mui/material/Button";
@@ -10,6 +10,7 @@ import { registerReferal } from "../pages/api/dappAPI";
 import { userRefresh } from "../pages/api/dappAPI";
 import PromoterStats from "./Promoter/promoterStats";
 import AdvertiserStats from "./Advertiser/advertiserStats";
+import SuccesModal from "../modals/succesModal";
 
 export default function ExpandedCard(props) {
   const { details, type, setExpanded, id } = props;
@@ -17,6 +18,8 @@ export default function ExpandedCard(props) {
   var referallsLeft = details.maxClicks - details.clicks;
   const { state, dispatch } = useContext(Context);
   const [promoterStats, setPromoterStats] = useState(false);
+  const [advertiserStats, setAdvertiserStats] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const effect = useSpring({
     width: "80%",
@@ -31,16 +34,10 @@ export default function ExpandedCard(props) {
 
   const handlePromoterClick = async () => {
     await registerReferal(id);
-    userRefresh().then((data) => {
-      dispatch({
-        type: "LOGGED_IN_USER",
-        payload: data.details,
-      });
-      dispatch({
-        type: "GET_DATA",
-        payload: data.jobs,
-      });
-    });
+    setShowModal(true);
+    setTimeout(() => {
+      setShowModal(false);
+    }, 2000);
     // axios.post("http://127.0.0.1:8000/api/test-firebase");
   };
 
@@ -64,17 +61,21 @@ export default function ExpandedCard(props) {
           <div className={styles.details__item}>
             Referalls Left: {referallsLeft}
           </div>
-          <div className={styles.details__item}>
-            API :
-            <button onClick={copyText} className={styles.copy__button}>
-              copy
-            </button>
-          </div>
-          <div className={styles.details__item}>
-            How to use: make an API call from your frontend using the API above,
-            pass the address of the current user of your app and the addreess
-            you use on this Dapp in the call. e.g using axios,
-          </div>
+          {type === "accepted" && (
+            <>
+              <div className={styles.details__item}>
+                API :
+                <button onClick={copyText} className={styles.copy__button}>
+                  copy
+                </button>
+              </div>
+              <div className={styles.details__item}>
+                How to use: make an API call from your frontend using the API
+                above, pass the address of the current user of your app and the
+                addreess you use on this Dapp in the call. e.g using axios,
+              </div>
+            </>
+          )}
         </div>
         {type === "promoter" && (
           <button className={styles.button} onClick={handlePromoterClick}>
@@ -96,6 +97,7 @@ export default function ExpandedCard(props) {
       {promoterStats && (
         <PromoterStats setStats={setPromoterStats} details={details} id={id} />
       )}
+      {showModal && <SuccesModal text={"registered succesfully"} />}
     </div>
   );
 }
