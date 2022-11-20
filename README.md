@@ -46,7 +46,7 @@ I plan to make prime ads the next big thing, npm packages facilitating customize
 
 this app has a backend functionalty, this is in a seperate github folder where i added the firebase Django functions to a pre-existing api i made.
 
-I used firebases python Admin SDK to update my firestore when a user referred someone
+I used firebases python Admin SDK to update my firestore when a user referred someone, when a user is reffered the store gets updated and the user is redirected to the Dapp
 
 Link to code: [Link](https://github.com/Seun2255/mail/blob/master/mail_sender/api/views.py)
 The code for the firebase function starts on line 93

@@ -11,7 +11,7 @@ export default function Dashboard(props) {
   const { jobs, type } = props;
   const [expanded, setExpanded] = useState(false);
   const [selected, setSelected] = useState();
-  const [selectedId, setSelectedId] = useState();
+  const [selectedId, setSelectedId] = useState(0);
 
   return (
     <div className={styles.container}>
@@ -23,6 +23,7 @@ export default function Dashboard(props) {
               return (
                 <Card
                   key={id}
+                  id={id}
                   details={ad}
                   setExpanded={setExpanded}
                   setSelected={setSelected}

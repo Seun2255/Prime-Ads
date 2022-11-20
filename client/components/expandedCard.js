@@ -14,6 +14,7 @@ import SuccesModal from "../modals/succesModal";
 
 export default function ExpandedCard(props) {
   const { details, type, setExpanded, id } = props;
+  console.log(id);
   var participants = Object.keys(details.participants).length;
   var referallsLeft = details.maxClicks - details.clicks;
   const { state, dispatch } = useContext(Context);
@@ -71,8 +72,8 @@ export default function ExpandedCard(props) {
               </div>
               <div className={styles.details__item}>
                 How to use: make an API call from your frontend using the API
-                above, pass the address of the current user of your app and the
-                addreess you use on this Dapp in the call. e.g using axios,
+                above, append the address of the current user of your Dapp to
+                the end of the API link.
               </div>
             </>
           )}

@@ -1,5 +1,5 @@
 import { animated, useSpring } from "react-spring";
-import styles from "../styles/modals/succesModal.module.css";
+import styles from "../styles/Modals/succesModal.module.css";
 
 export default function SuccesModal(props) {
   const { text } = props;
