@@ -45,3 +45,5 @@ I plan to make prime ads the next big thing, npm packages facilitating customize
 ## Backend API
 
 this app has a backend functionalty, this is in a seperate github folder where i added the firebase Django functions to a pre-existing api i made.
+
+I used firebases python Admin SDK to update my firestore when a user referred someone

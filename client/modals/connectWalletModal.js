@@ -11,6 +11,8 @@ import { connect } from "../pages/api/dappAPI";
 import { Context } from "../context";
 import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
 import axios from "axios";
+import { doc, onSnapshot } from "firebase/firestore";
+import { db } from "../pages/api/database";
 
 export default function ConnectWalletModal(props) {
   const { setWalletModal, setConnected, option } = props;
@@ -63,6 +65,17 @@ export default function ConnectWalletModal(props) {
           type: "GET_DATA",
           payload: userData.jobs,
         });
+
+        const unsubUser = onSnapshot(
+          doc(db, "users", userData.details.address),
+          (doc) => {
+            var data = doc.data();
+            dispatch({
+              type: "LOGGED_IN_USER",
+              payload: data,
+            });
+          }
+        );
       } else {
         console.log("Some error occured");
       }

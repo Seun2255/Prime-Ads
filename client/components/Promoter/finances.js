@@ -18,6 +18,7 @@ export default function Finances(props) {
           <span>Token balance: {user.tokenBalance} PRI</span>
           <button onClick={() => setTransactionModal(true)}>Get more +</button>
         </div>
+        <button className={styles.withdraw__button}>Wiithdraw Balance</button>
       </div>
       {transactionModal && (
         <BuyTokensModal setTransactionModal={setTransactionModal} />

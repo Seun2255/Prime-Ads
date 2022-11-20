@@ -1,4 +1,4 @@
-import styles from "../styles/expandedCard.module.css";
+import styles from "../../styles/expandedCard.module.css";
 import icons from "../../assets/icons/icons";
 import { useSpring, animated } from "react-spring";
 import { useEffect, useState, useContext } from "react";
@@ -17,7 +17,7 @@ export default function AdvertiserStats(props) {
 
   return (
     <div className={styles.container}>
-      <animated.div className={styles.content} style={effect}>
+      <animated.div className={styles.content}>
         <Button
           variant="contained"
           style={muiStyles.backButton}

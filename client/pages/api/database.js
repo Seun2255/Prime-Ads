@@ -155,6 +155,7 @@ const joinReferral = async (address, id) => {
 };
 
 export {
+  db,
   createUser,
   updateUserProfile,
   getUserDetails,

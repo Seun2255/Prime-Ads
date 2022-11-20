@@ -17,19 +17,7 @@ export default function NewProject(props) {
   };
 
   const handleClickStart = async () => {
-    startNewAd(amount, title, link).then(() => {
-      userRefresh().then((data) => {
-        dispatch({
-          type: "LOGGED_IN_USER",
-          payload: data.details,
-        });
-
-        dispatch({
-          type: "GET_DATA",
-          payload: data.jobs,
-        });
-      });
-    });
+    startNewAd(amount, title, link).then(() => {});
   };
 
   return (

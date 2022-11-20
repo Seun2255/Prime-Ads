@@ -1,0 +1,26 @@
+.outer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  font-size: 28px;
+  height: 3em;
+  padding: 0 30px;
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.text {
+  font-size: 28px;
+  color: #9a81ff;
+  font-weight: 500;
+}

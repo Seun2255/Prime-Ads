@@ -8,12 +8,15 @@ import Button from "@mui/material/Button";
 import ArrowBack from "@mui/icons-material/ArrowBackSharp";
 import { registerReferal } from "../pages/api/dappAPI";
 import { userRefresh } from "../pages/api/dappAPI";
+import PromoterStats from "./Promoter/promoterStats";
+import AdvertiserStats from "./Advertiser/advertiserStats";
 
 export default function ExpandedCard(props) {
   const { details, type, setExpanded, id } = props;
   var participants = Object.keys(details.participants).length;
   var referallsLeft = details.maxClicks - details.clicks;
   const { state, dispatch } = useContext(Context);
+  const [promoterStats, setPromoterStats] = useState(false);
 
   const effect = useSpring({
     width: "80%",
@@ -33,7 +36,6 @@ export default function ExpandedCard(props) {
         type: "LOGGED_IN_USER",
         payload: data.details,
       });
-
       dispatch({
         type: "GET_DATA",
         payload: data.jobs,
@@ -62,18 +64,17 @@ export default function ExpandedCard(props) {
           <div className={styles.details__item}>
             Referalls Left: {referallsLeft}
           </div>
-          {type === "accepted" && (
-            <>
-              <div className={styles.details__item}>
-                API : https://tritek-mail.herokuapp.com/api/
-              </div>
-              <div className={styles.details__item}>
-                How to use: make an API call from your frontend using the API
-                above, pass the address of the current user of your app and the
-                addreess you use on this Dapp in the call. e.g using axios,
-              </div>
-            </>
-          )}
+          <div className={styles.details__item}>
+            API :
+            <button onClick={copyText} className={styles.copy__button}>
+              copy
+            </button>
+          </div>
+          <div className={styles.details__item}>
+            How to use: make an API call from your frontend using the API above,
+            pass the address of the current user of your app and the addreess
+            you use on this Dapp in the call. e.g using axios,
+          </div>
         </div>
         {type === "promoter" && (
           <button className={styles.button} onClick={handlePromoterClick}>
@@ -84,9 +85,17 @@ export default function ExpandedCard(props) {
           <button className={styles.button}>View Stats</button>
         )}
         {type === "accepted" && (
-          <button className={styles.button}>View Stats</button>
+          <button
+            className={styles.button}
+            onClick={() => setPromoterStats(true)}
+          >
+            View Stats
+          </button>
         )}
       </animated.div>
+      {promoterStats && (
+        <PromoterStats setStats={setPromoterStats} details={details} id={id} />
+      )}
     </div>
   );
 }

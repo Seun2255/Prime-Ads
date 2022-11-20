@@ -23,14 +23,19 @@
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .balance {
-  margin-top: 10px;
-  margin-right: 10px;
   align-self: flex-end;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .balance span {
@@ -50,6 +55,19 @@
   width: -moz-fit-content;
   width: fit-content;
   align-self: flex-end;
+  cursor: pointer;
+  border: none;
+}
+
+.withdraw__button {
+  padding: 0 20px;
+  font-size: 24px;
+  height: 2em;
+  background-color: rgb(0 75 204);
+  color: white;
+  border-radius: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
   cursor: pointer;
   border: none;
 }
