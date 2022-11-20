@@ -54,6 +54,7 @@ export default function ConnectWalletModal(props) {
     const signature = await signMessageAsync({ message });
 
     connect().then((userData) => {
+      console.log(userData);
       setWalletModal(false);
       if (userData) {
         dispatch({
@@ -69,10 +70,16 @@ export default function ConnectWalletModal(props) {
         const unsubUser = onSnapshot(
           doc(db, "users", userData.details.address),
           (doc) => {
-            var data = doc.data();
-            dispatch({
-              type: "LOGGED_IN_USER",
-              payload: data,
+            connect().then((userData) => {
+              dispatch({
+                type: "LOGGED_IN_USER",
+                payload: userData.details,
+              });
+
+              dispatch({
+                type: "GET_DATA",
+                payload: userData.jobs,
+              });
             });
           }
         );
