@@ -16,17 +16,23 @@ export default function Dashboard(props) {
     <div className={styles.container}>
       <h3 className={styles.title}>Ads Posted</h3>
       <div className={styles.card__grid}>
-        {offers.openOffers.map((ad, id) => {
-          return (
-            <Card
-              key={id}
-              id={id}
-              details={ad}
-              setExpanded={setExpanded}
-              setSelected={setSelected}
-            />
-          );
-        })}
+        {offers.openOffers.length === 0 ? (
+          <div className={styles.empty}>Nothing here yet</div>
+        ) : (
+          <>
+            {offers.openOffers.map((ad, id) => {
+              return (
+                <Card
+                  key={id}
+                  id={id}
+                  details={ad}
+                  setExpanded={setExpanded}
+                  setSelected={setSelected}
+                />
+              );
+            })}
+          </>
+        )}
       </div>
       {expanded && (
         <ExpandedCard

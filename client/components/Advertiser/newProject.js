@@ -8,7 +8,7 @@ import SuccesModal from "../../modals/succesModal";
 
 export default function NewProject(props) {
   const [title, setTitle] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
   const [link, setLink] = useState("");
   const [showModal, setShowModal] = useState(false);
 
@@ -43,7 +43,7 @@ export default function NewProject(props) {
           onChange={(e) => setTitle(e.target.value)}
         />
       </div>
-      <div className={styles.model}>
+      {/* <div className={styles.model}>
         <span>Advertisement Type: </span>
         <button
           className={styles.option__button}
@@ -52,7 +52,7 @@ export default function NewProject(props) {
           Regular
         </button>
         <button className={styles.option__button}>Custom</button>
-      </div>
+      </div> */}
       <div className={styles.details__box}>
         <div className={styles.amount}>
           <span>Amount: </span>
@@ -63,14 +63,14 @@ export default function NewProject(props) {
           />
         </div>
         <div className={styles.amount}>
-          <span>Link: </span>
+          <span>Site Link: </span>
           <input
             className={styles.amount__input}
             onChange={(e) => setLink(e.target.value)}
           />
         </div>
         <div className={styles.incentive}>
-          up to a {amount * 10} poeple will gain awareness of your site!
+          up to {amount * 10} new poeple will visit your site!
         </div>
         <button className={styles.start} onClick={handleClickStart}>
           Start

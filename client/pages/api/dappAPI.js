@@ -193,6 +193,13 @@ const registerReferal = async (id) => {
   await joinReferral(address, id);
 };
 
+const withdrawBalance = async (amount) => {
+  const contract = await getContract();
+
+  let txn = await contract.sellTokens(amount);
+  await txn.wait();
+};
+
 export {
   getProvider,
   connect,
@@ -205,6 +212,7 @@ export {
   startNewAd,
   userRefresh,
   registerReferal,
+  withdrawBalance,
 };
 
 // //upload functions

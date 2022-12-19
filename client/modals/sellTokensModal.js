@@ -3,10 +3,10 @@ import { animated, useSpring } from "react-spring";
 import { useState, useContext, useEffect } from "react";
 import Image from "next/image";
 import icons from "../assets/icons/icons";
-import { buyTokens, updatedBalance } from "../pages/api/dappAPI";
+import { withdrawBalance, updatedBalance } from "../pages/api/dappAPI";
 import { Context } from "../context";
 
-export default function BuyTokensModal(props) {
+export default function SellTokensModal(props) {
   const { setTransactionModal } = props;
   const [amount, setAmount] = useState();
   const { state, dispatch } = useContext(Context);
@@ -25,7 +25,7 @@ export default function BuyTokensModal(props) {
   };
 
   const handleClick = () => {
-    buyTokens(amount / 1000).then(async () => {
+    withdrawBalance(amount).then(async () => {
       const data = await updatedBalance(state.user);
       dispatch({
         type: "LOGGED_IN_USER",
@@ -44,7 +44,7 @@ export default function BuyTokensModal(props) {
         >
           <Image src={icons.collapse} layout="fill" />
         </div>
-        <h4 className={styles.box__header}>Buy Prime Token</h4>
+        <h4 className={styles.box__header}>Sell Prime Tokens</h4>
         <div className={styles.input__box}>
           <h4 className={styles.input__title}>How many Prime?</h4>
           <div className={styles.input__outer}>
@@ -58,7 +58,7 @@ export default function BuyTokensModal(props) {
           <p className={styles.equivalence}>~ {amount / 1000} Matic</p>
         </div>
         <button className={styles.button} onClick={handleClick}>
-          Buy Tokens
+          Sell Tokens
         </button>
       </animated.div>
     </div>

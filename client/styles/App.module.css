@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0% 20px;
-  border-bottom: 1px solid #004bcc;
+  border-bottom: 1px solid #00286e;
 }
 
 .logo {
@@ -29,7 +29,7 @@
   padding: 0 20px;
   font-size: 18px;
   font-weight: 600;
-  background-color: #004bcc;
+  background-color: #00286e;
   color: white;
   border-radius: 5px;
   border: none;
@@ -74,7 +74,7 @@
 }
 
 .center__connect__button {
-  background-color: #004bcc;
+  background-color: #00286e;
   border-radius: 5px;
   height: 2em;
   padding: 0 20px;

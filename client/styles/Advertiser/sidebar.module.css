@@ -102,7 +102,7 @@
   font-size: 18px;
   height: 3em;
   background-color: transparent;
-  color: #004bcc;
+  color: #00286e;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -112,8 +112,8 @@
   margin: 0 auto;
   cursor: pointer;
   border: none;
-  border-top: 3px solid #004bcc;
-  border-bottom: 3px solid #004bcc;
+  border-top: 3px solid #00286e;
+  border-bottom: 3px solid #00286e;
 }
 
 .switch__icon {

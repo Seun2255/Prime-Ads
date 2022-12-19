@@ -9,6 +9,8 @@ import settings from "./settings.svg";
 import addProject from "./Add project icon.svg";
 import modeSwap from "./switch.svg";
 import collapse from "./collapse.svg";
+import logo from "./logo.png";
+import arrow from "./arrow.svg";
 
 const icons = {
   locked: locked,
@@ -22,6 +24,8 @@ const icons = {
   addProject,
   modeSwap,
   collapse,
+  logo,
+  arrow,
 };
 
 export default icons;

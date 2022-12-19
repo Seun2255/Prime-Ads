@@ -16,7 +16,7 @@ export default function Finances(props) {
       <div className={styles.title}>Finances</div>
       <div className={styles.content}>
         <div className={styles.balance}>
-          <span>ETH balance: {state.user.ethBalance} ETH</span>
+          <span>Matic balance: {state.user.ethBalance} Matic</span>
           <span>Token balance: {state.user.tokenBalance} PRI</span>
           <button onClick={() => setTransactionModal(true)}>Get more +</button>
         </div>

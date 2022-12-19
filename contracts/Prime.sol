@@ -35,7 +35,7 @@ contract Prime is ERC20, Ownable {
         emit TokensBought();
     }
 
-    function sellToken(uint256 amount) public payable {
+    function sellTokens(uint256 amount) public payable {
         require(amount > 0, "Don't you have tokens?");
         uint balance = balanceOf(msg.sender);
         require(balance >= amount, "Your balance is too low");

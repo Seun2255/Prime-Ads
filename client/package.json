@@ -21,7 +21,9 @@
     "next-auth": "^4.16.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-dropzone": "^14.2.3",
     "react-loader-spinner": "^5.3.4",
+    "react-player": "^2.11.0",
     "react-spring": "^9.5.5",
     "wagmi": "^0.8.2",
     "web3modal": "^1.9.9"

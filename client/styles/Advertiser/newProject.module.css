@@ -46,14 +46,13 @@
   font-size: 20px;
   height: 2.5em;
   width: 500px;
-  background-color: #f6f6f6;
   border-radius: 10px;
   display: flex;
   align-items: center;
   padding-left: 20px;
   margin-top: 10px;
   border: none;
-  background-color: rgb(247 250 252);
+  background-color: rgb(231, 239, 244);
 }
 
 .model {
@@ -70,7 +69,7 @@
   font-size: 20px;
   height: 2em;
   padding: 0 20px;
-  background-color: #004bcc;
+  background-color: #00286e;
   color: white;
   font-weight: 600;
   border-radius: 20px;
@@ -80,7 +79,7 @@
   margin-top: 40px;
   width: 80%;
   border-radius: 15px;
-  background-color: rgb(247 250 252);
+  background-color: rgb(231, 239, 244);
   padding-left: 20px;
   box-sizing: border-box;
   display: flex;
@@ -107,7 +106,7 @@
   border: none;
   outline: none;
   padding-left: 10px;
-  color: #004bcc;
+  color: #00286e;
   border-radius: 15px;
 }
 
@@ -126,4 +125,5 @@
   margin-top: 40px;
   margin-bottom: 30px;
   cursor: pointer;
+  background-color: white;
 }

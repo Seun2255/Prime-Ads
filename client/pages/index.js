@@ -1,14 +1,16 @@
+import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import styles from "../styles/Main.module.css";
+import Header from "../components/Main/header";
+import Footer from "../components/Main/footer";
+import Section from "../components/Main/section";
 
 export default function Home() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.push("/app/1");
-  }, []);
-
-  return <div className={styles.container}></div>;
+  return (
+    <div className={styles.container}>
+      <Header />
+      <Section />
+      <Footer />
+    </div>
+  );
 }

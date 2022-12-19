@@ -1,0 +1,267 @@
+.header {
+  background-color: #00286e;
+  width: 100%;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+.nav {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 22px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.logo__name {
+  display: flex;
+  align-items: center;
+}
+
+.logo__container {
+  display: flex;
+  align-items: center;
+}
+
+.logo__icon {
+  position: relative;
+  height: 45px;
+  width: 40px;
+}
+
+.logo {
+  font-family: "Manrope";
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0%;
+  margin-left: 10px;
+}
+
+.list {
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0%;
+  margin-left: 0px;
+}
+
+.list__item {
+  font-family: "Passenger Sans";
+  padding: 0px 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.list__item:hover {
+  color: red;
+  transition: 0.4s;
+}
+
+.btn_1 {
+  font-family: "Passenger Sans";
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  font-weight: bold;
+  padding: 10px 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.app__button {
+  font-family: "Passenger Sans";
+  background-color: white;
+  color: #00286e;
+  text-decoration: none;
+  border: 2px solid white;
+  font-weight: 800;
+  font-size: 18px;
+  padding: 10px 40px;
+  border-radius: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.btn_1 a:hover {
+  transform: scale(1.2);
+}
+
+.btn_2 a:hover {
+  color: red;
+}
+
+.main__container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  top: 25%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  align-items: center;
+}
+.content {
+  margin-top: 20px;
+}
+
+.tool {
+  font-family: "Passenger Sans";
+  background-color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #00286e;
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+  padding: 6px 20px;
+  border-radius: 8px;
+  margin: auto;
+  position: relative;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.crown {
+  position: absolute;
+  top: -81%;
+  right: 0%;
+}
+
+.easier {
+  font-family: "Manrope";
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 45px;
+  line-height: 67px;
+  font-weight: 500;
+  font-stretch: ultra-expanded;
+  margin-top: 20px;
+}
+
+.save {
+  font-family: "Passenger Sans";
+  color: white;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.use {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding-bottom: 10px;
+}
+
+.btn_3 {
+  font-family: "Passenger Sans";
+  background-color: white;
+  color: #00286e;
+  text-decoration: none;
+  border: 2px white;
+  padding: 20px 32px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.watch__demo {
+  font-family: "Passenger Sans";
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.arrow {
+  position: absolute;
+  top: 61%;
+  left: 20%;
+}
+
+.btn_4 {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.used-by {
+  margin-top: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+
+.how {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  color: #1c2c27;
+  font-weight: 600;
+  font-size: 40px;
+  padding-top: 100px;
+  text-align: justify;
+}
+
+.how-1 {
+  color: #00286e;
+}
+.steps {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #00286e;
+  font-weight: 300;
+}
+
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0px 10px 10px;
+}

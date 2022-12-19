@@ -17,7 +17,6 @@ export default function PromoterSideBar(props) {
   const options = [
     { icon: icons.library, text: "Dashboard" },
     { icon: icons.finance, text: "finances" },
-    { icon: icons.settings, text: "Settings" },
     { icon: icons.addProject, text: "Ongoing Ads" },
   ];
 
@@ -27,7 +26,7 @@ export default function PromoterSideBar(props) {
         {/* <div className={styles.logo}>
           <Image alt="logo" src={icons.logo} layout="fill" />
         </div> */}
-        <animated.span className={styles.logo__name}>Prime adds</animated.span>
+        <animated.span className={styles.logo__name}>Prime ads</animated.span>
       </div>
       <animated.div className={styles.nav__buttons} style={buttons}>
         <div className={styles.nav__title}>MENU</div>
@@ -43,7 +42,7 @@ export default function PromoterSideBar(props) {
                     : "transparent",
                 borderLeft:
                   view === option.text.toLowerCase()
-                    ? "3px solid #004bcc"
+                    ? "3px solid #00286e"
                     : "none",
               }}
               onClick={() => setView(option.text.toLowerCase())}

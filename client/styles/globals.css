@@ -1,3 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+@font-face {
+  font-family: "Lucida Sans";
+  src: url("/fonts/Lucida-Sans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Passenger Sans";
+  src: url("/fonts/PassengerSans-Regular.eot"),
+    url("/fonts/PassengerSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Passenger Sans";
+  src: url("/PassengerSans-Bold.eot"),
+    url("/fonts/PassengerSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirLTStd-Book.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   padding: 0;
